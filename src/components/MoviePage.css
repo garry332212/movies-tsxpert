@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap');
+
+.movieContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: flex-start;
+  background-color: #1a1a1a;
+  /* min-height: 100vh; */
+}
+
+.movieCard {
+  display: flex;
+  flex-direction: column;
+  width: calc((100% - 100px) / 6);
+  min-width: 200px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.movieCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(158, 202, 46, 0.5);
+}
+
+.moviePoster {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 2/3;
+  /* display: block; */
+}
+
+.movieInfo {
+  padding: 15px;
+  color: #ffffff;
+}
+
+.movieInfo h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Exo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.movieInfo .rating {
+  font-size: 18px;
+  color: #ffd700;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.movieInfoBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 10px;
+  color: #b0b0b0;
+  font-size: 12px;
+}
+
+.movieInfoBottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1920px) {
+  .movieCard {
+    width: calc((100% - 100px) / 6);
+  }
+}
+
+@media (max-width: 1600px) {
+  .movieCard {
+    width: calc((100% - 80px) / 5);
+  }
+}
+
+@media (max-width: 1280px) {
+  .movieCard {
+    width: calc((100% - 60px) / 4);
+  }
+}
+
+@media (max-width: 1024px) {
+  .movieCard {
+    width: calc((100% - 40px) / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .movieContainer {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .movieCard {
+    width: calc((100% - 15px) / 2);
+    min-width: 150px;
+  }
+
+  .movieInfo h2 {
+    font-size: 14px;
+  }
+
+  .movieInfo .rating {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movieContainer {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .movieCard {
+    width: 100%;
+    min-width: unset;
+  }
+}
